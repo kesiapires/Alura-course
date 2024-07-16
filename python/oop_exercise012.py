@@ -34,23 +34,23 @@ print(titular2)
 
 #Refatore a classe ContaBancaria para utilizar a abordagem "pythonica" 
 #na criação de atributos. Utilize propriedades, se necessário.
-    class ContaBancariaPythonica:
-        def __init__(self, titular, saldo):
-            self._titular = titular
-            self._saldo = saldo
-            self._ativo = False
+class ContaBancariaPythonica:
+    def __init__(self, titular, saldo):
+        self._titular = titular
+        self._saldo = saldo
+        self._ativo = False
 
-        @property
-        def titular(self):
-            return self._titular
+    @property
+    def titular(self):
+        return self._titular
 
-        @property
-        def saldo(self):
-            return self._saldo
+    @property
+    def saldo(self):
+        return self._saldo
 
-        @property
-        def ativo(self):
-            return self._ativo
+    @property
+    def ativo(self):
+        return self._ativo
 
 
 #Crie uma instância da classe e imprima o valor da propriedade titular.
@@ -76,10 +76,10 @@ cliente3 = ClienteBanco("Vinny Neves", 40, "Rua C", "111.222.333-44", "Frontend"
 
 
 #Crie um método de classe para a conta ClienteBanco.
- @classmethod
-    def criar_conta(cls, titular, saldo_inicial):
-        conta = ContaBancariaPythonica(titular, saldo_inicial)
-        return conta
+@classmethod
+def criar_conta(cls, titular, saldo_inicial):
+    conta = ContaBancariaPythonica(titular, saldo_inicial)
+    return conta
 # Exemplo de uso do método de classe
 conta_cliente1 = ClienteBanco.criar_conta("Ana", 2000)
 print(f"Conta de {conta_cliente1.titular} criada com saldo inicial de R${conta_cliente1.saldo}")
