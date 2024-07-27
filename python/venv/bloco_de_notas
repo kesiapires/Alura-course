@@ -1,0 +1,40 @@
+####### AMBIENTES VIRTUAIS #######
+
+-virtualenv- versão avançada, mas abaixo de python 3.3
+-Venv- integrado com o python
+
+para criar essa venv escreva no terminal:
+
+m- venv venv
+
+#
+m-: indica que quer criar um modulo de script
+venv: pra criar uma venv
+venv: poderia ser qualquer nome, mas por questão de boas práticas e convenção é venv ou env
+#
+
+    -Include: manter os modulos escritos em C. 
+criar cabeçalho do ambiente e dos modulos que precisam ser escritos no projeto
+
+    -Lib: manter as bibliotecas e modulos especificos para o ambiente. 
+armazena todos os pacotes e dependencias que estiver instalando no ambiente virtual
+
+    -Pip: responsavel pelas instalações. Gerenciador de modulos e pacotes no python. 
+        pip install
+        pip freeze- mostra tudo o que tem
+            pip freeze > requirements.txt
+    -Scripts: aqui dentro é mantido scripts e executaveis. sempre que for ativar o ambiente virtual informações dentro dessa pasta será ultilizada
+
+    -pyvenve.cfg: arquivo de configuração
+
+
+ATIVAR O AMBIENTE VIRTUAL:
+    1-colocar no diretorio do arquivo (windows)
+    venv\scripts\activate.bat
+    2-colocar no diretorio do arquivo (linux ou mac)
+    source venv/bina/activate
+    <env>/bin/activate (linux ou mac virtualenv)
+COMO SABER SE FOI ATIVADO:
+    (venv)blablablabla
+COMO DESATIVAR:
+    deactivate
